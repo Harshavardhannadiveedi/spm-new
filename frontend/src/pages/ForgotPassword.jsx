@@ -18,7 +18,7 @@ function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/forgot-password', formData);
+      await axios.post('https://spm-backend-hybi.onrender.com/api/auth/forgot-password', formData);
       setSuccess('Password reset successfully');
       setError('');
       setTimeout(() => navigate('/'), 2000);

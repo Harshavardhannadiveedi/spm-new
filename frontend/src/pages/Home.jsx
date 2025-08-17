@@ -15,8 +15,8 @@ function Home() {
         try {
           const url =
             user.role === 'hod'
-              ? 'http://localhost:5000/api/permissions'
-              : 'http://localhost:5000/api/permissions/my-permissions';
+              ? 'https://spm-backend-hybi.onrender.com/api/permissions'
+              : 'https://spm-backend-hybi.onrender.com/api/permissions/my-permissions';
           const response = await axios.get(url, {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           });
@@ -32,7 +32,7 @@ function Home() {
   const handleUpdateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/permissions/${id}`,
+        `https://spm-backend-hybi.onrender.com/api/permissions/${id}`,
         { status },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
