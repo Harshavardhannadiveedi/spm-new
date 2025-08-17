@@ -9,7 +9,7 @@ import userRoutes from './routes/users.js';
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:5174' }));
+app.use(cors({ origin: 'https://permissionmanagement.netlify.app' }));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
